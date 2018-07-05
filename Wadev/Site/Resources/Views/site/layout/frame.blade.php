@@ -62,61 +62,12 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-		<nav class="fh5co-nav" role="navigation">
-			<div class="top">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 text-right">
-							<p class="site">www.abdulhanan.com</p>
-							<p class="num">Call: +6283817520840</p>
-							<ul class="fh5co-social">
-								<li><a href="#"><i class="icon-facebook2"></i></a></li>
-								<li><a href="#"><i class="icon-twitter2"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble2"></i></a></li>
-								<li><a href="#"><i class="icon-github"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="top-menu">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-2">
-							<div id="fh5co-logo"><a href="index.html"><i class="icon-study"></i>Educ<span>.</span></a></div>
-						</div>
-						<div class="col-xs-10 text-right menu-1">
-							<ul>
-								<li class="active"><a href="#">Home</a></li>
-								<li><a href="courses.html">Courses</a></li>
-								<li><a href="teacher.html">Teacher</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="pricing.html">Pricing</a></li>
-								<li class="has-dropdown">
-									<a href="blog.html">Blog</a>
-									<ul class="dropdown">
-										<li><a href="#">Web Design</a></li>
-										<li><a href="#">eCommerce</a></li>
-										<li><a href="#">Branding</a></li>
-										<li><a href="#">API</a></li>
-									</ul>
-								</li>
-								<li><a href="/site/contact/">Contact</a></li>
-								<li class="btn-cta"><a href="#"><span>Login</span></a></li>
-								<li class="btn-cta"><a href="#"><span>Create a Course</span></a></li>
-							</ul>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</nav>
+		@include('wadev.site::site.layout.sub.navbar')
+		@yield('body')	
 	</div>
-
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
 	<!-- jQuery -->
 	<script src="/standard/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -140,27 +91,10 @@
 	<script src="/standard/js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="/standard/js/main.js"></script>
-	<script>
-    var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
 
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
-    });
 
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
-	</script>
-		@yield('body')
-		@include('wadev.site::site.layout.sub.footer')
-</div>
+	@include('wadev.site::site.layout.sub.footer')
+
 	</body>
 </html>
 

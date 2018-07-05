@@ -8,12 +8,10 @@
 @section('body')
 <div class="container">
     <div class="row">
-            @include('wadev.site::site.home.partials.slide')
-        
+        @include('wadev.site::site.home.partials.slide')
     </div>
     <div class="row">
-            @include('wadev.site::site.home.partials.course')
-        
+        @include('wadev.site::site.home.partials.course')    
     </div>
     <div class="row">
         @include('wadev.site::site.home.partials.studentCount')
